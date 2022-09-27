@@ -1,8 +1,8 @@
 package com.bobocode.repository;
 
 import com.bobocode.entity.ShortUrl;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface UrlRepository extends JpaRepository<ShortUrl, String> {
+public interface UrlRepository extends CrudRepository<ShortUrl, String> {
 
 }

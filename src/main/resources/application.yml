@@ -1,11 +1,8 @@
 spring:
-  jpa:
-    open-in-view: false
-    show-sql: true
-  datasource:
-    username: baeldung
-    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=handozhynski
-    password: baeldung
+  application:
+    name: url-shortener-redis
   jackson:
     property-naming-strategy: SNAKE_CASE
-
+  redis:
+    host: redis
+    port: 6379

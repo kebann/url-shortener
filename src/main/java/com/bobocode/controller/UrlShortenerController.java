@@ -3,7 +3,7 @@ package com.bobocode.controller;
 
 import static org.springframework.http.HttpStatus.MOVED_PERMANENTLY;
 
-import com.bobocode.dto.UrlInfoDTO;
+import com.bobocode.dto.UrlInfoDto;
 import com.bobocode.service.UrlShortenerService;
 import java.net.URI;
 import javax.validation.Valid;
@@ -25,7 +25,7 @@ public class UrlShortenerController {
   private final UrlShortenerService urlShortenerService;
 
   @PostMapping
-  public ResponseEntity<?> shortenUrl(@RequestBody @Valid UrlInfoDTO urlInfo) {
+  public ResponseEntity<?> shortenUrl(@RequestBody @Valid UrlInfoDto urlInfo) {
     String shortUrlKey = urlShortenerService.shorten(urlInfo);
     return ResponseEntity.created(buildShortURI(shortUrlKey)).build();
   }
